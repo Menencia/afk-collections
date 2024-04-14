@@ -1,16 +1,21 @@
 import { Component } from '@angular/core';
 import { AutoCompleteSelectEvent } from 'primeng/autocomplete';
 
+interface Stat {
+  name: string;
+  level?: string;
+}
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  public selectedStat?: string;
+  public selectedStat?: Stat;
   public allSuggestions: string[];
   public suggestions: string[];
-  public stats: string[] = [];
+  public stats: Stat[] = [];
 
   constructor() {
     this.allSuggestions = ['atk', 'err'];
@@ -24,8 +29,12 @@ export class HomeComponent {
   }
 
   public select(event: AutoCompleteSelectEvent): void {
-    this.stats.push(event.value);
+    this.stats.push({ name: event.value });
     this.suggestions = [...this.allSuggestions];
     this.selectedStat = undefined;
+  }
+
+  public removeStat(stat: Stat): void {
+    this.stats = this.stats.filter((s) => s !== stat);
   }
 }

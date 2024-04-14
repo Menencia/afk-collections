@@ -1,6 +1,14 @@
 <p>Stats</p>
 
-<div *ngFor="let stat of stats">{{ stat }}</div>
+<div *ngFor="let stat of stats">
+  {{ stat.name }}
+  <i
+    (click)="removeStat(stat)"
+    (keypress)="removeStat(stat)"
+    tabindex="0"
+    class="pi pi-times"
+  ></i>
+</div>
 
 <p-autoComplete
   [(ngModel)]="selectedStat"
