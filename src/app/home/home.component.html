@@ -57,7 +57,7 @@
             src="/assets/affixes/{{ affix.code }}.png"
             [class]="'flag flag-' + affix.code"
             alt="affix"
-            style="width: 18px"
+            class="h-8"
           />
           <div>{{ "affix." + affix.code | translate }}</div>
         </div>
@@ -76,7 +76,7 @@
             pTooltip="{{ 'affix.' + offAffix | translate }}"
             tooltipPosition="bottom"
             src="/assets/affixes/{{ offAffix }}.png"
-            height="32"
+            class="h-8 inline-block"
             alt="{{ offAffix }}"
           />
         </div>
@@ -86,7 +86,7 @@
             pTooltip="{{ 'affix.' + defAffix | translate }}"
             tooltipPosition="bottom"
             src="/assets/affixes/{{ defAffix }}.png"
-            height="32"
+            class="h-8 inline-block"
             alt="{{ defAffix }}"
           />
         </div>
