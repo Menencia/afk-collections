@@ -4,6 +4,7 @@
       [options]="allCollections"
       [(ngModel)]="selectedCollection"
       optionLabel="name"
+      [placeholder]="'Select a collection' | translate"
       [showClear]="true"
       (onChange)="updateHeroes()"
     >
@@ -12,7 +13,7 @@
           <img
             src="/assets/collections/{{ selectedCollection.code }}.png"
             alt="{{ selectedCollection.name }}"
-            style="width: 18px"
+            class="h-8"
           />
           <div>{{ "collection." + selectedCollection.code | translate }}</div>
         </div>
@@ -22,7 +23,7 @@
           <img
             src="/assets/collections/{{ collection.code }}.png"
             alt="{{ collection.name }}"
-            style="width: 18px"
+            class="h-8"
           />
           <div>{{ "collection." + collection.code | translate }}</div>
         </div>
@@ -30,22 +31,23 @@
     </p-dropdown>
   </p-panel>
 
-  <p-panel header="Affixes" styleClass="mb-3">
-    <div *ngFor="let affix of affixes">
+  <p-panel [header]="'Affixes' | translate" styleClass="mb-3">
+    <div class="mb-2">
       <p-chip
+        *ngFor="let affix of affixes"
         label="{{ 'affix.' + affix.code | translate }}"
         removable="true"
         (onRemove)="removeAffix(affix)"
         image="/assets/affixes/{{ affix.code }}.png"
         alt="affix"
+        styleClass="inline-block mr-1"
       ></p-chip>
     </div>
-
-    <p>Add affix :</p>
 
     <p-autoComplete
       [(ngModel)]="selectedAffix"
       [suggestions]="suggestions"
+      [placeholder]="'Add an affix' | translate"
       [dropdown]="true"
       field="name"
       (completeMethod)="search($event)"
@@ -65,7 +67,7 @@
     </p-autoComplete>
   </p-panel>
 
-  <p-panel header="Results" styleClass="mb-3">
+  <p-panel [header]="'Results' | translate" styleClass="mb-3">
     <div class="results">
       <p-card *ngFor="let result of results">
         {{ result.hero.name | titlecase }}
