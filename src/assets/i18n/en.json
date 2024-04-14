@@ -1,0 +1,41 @@
+{
+  "affix": {
+    "atk": "ATK",
+    "cda": "CDA",
+    "crit": "CRIT",
+    "err": "ERR",
+    "erosion": "Erosion",
+    "f-atk": "Full ATK",
+    "f-erosion": "Full Erosion",
+    "is": "IS",
+    "ll": "LL",
+    "mp": "MP",
+    "pp": "PP",
+    "prf": "PRF",
+    "armor": "Armor",
+    "buffer": "Buffer",
+    "cbr": "CBR",
+    "cdr": "CDR",
+    "def": "DEF",
+    "diss": "DISS",
+    "dmg-r": "DMG Resist",
+    "f-buffer": "Full Buffer",
+    "f-def": "Full DEF",
+    "f-hp": "Full HP",
+    "heal": "HEAL",
+    "hp": "HP",
+    "ty": "TY"
+  },
+  "collection": {
+    "zolrath": "Temporal Cover",
+    "saurus": "Shadow Dancer",
+    "orthros": "Timeline Watch",
+    "daimon": "Spell Bondage",
+    "athalia": "Judgment Armor",
+    "tidus": "Sandstorm Fangs",
+    "mehira": "Captive Wings",
+    "oden": "Oculus Diabolus",
+    "rowan": "Trader's Vault",
+    "tasi": "Luminous Flight"
+  }
+}

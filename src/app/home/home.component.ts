@@ -4,9 +4,11 @@ import { Hero, HeroJson } from '../shared/models/hero';
 import { HttpClient } from '@angular/common/http';
 import { AffixUtils } from '../shared/utils/affix.utils';
 import { CollectionUtils } from '../shared/utils/collection.utils';
+import { TranslateService } from '@ngx-translate/core';
 
 interface Affix {
   name: string;
+  code: string;
   level?: string;
 }
 
@@ -24,17 +26,21 @@ const MAX_AFFIX_PRIORITIES = 4;
 })
 export class HomeComponent {
   public selectedAffix?: Affix;
-  public suggestions: string[];
+  public suggestions: { code: string; name: string }[];
   public affixes: Affix[] = [];
   public results: ResultHero[] = [];
-  public selectedCollection?: string;
-  public allCollections: string[];
+  public selectedCollection?: { code: string; name: string };
+  public allCollections: { code: string; name: string }[];
 
-  private allSuggestions: string[];
+  private allSuggestions: { code: string; name: string }[];
   private allHeroes: Hero[] = [];
 
-  constructor(private http: HttpClient) {
-    this.allSuggestions = AffixUtils.getList();
+  constructor(
+    private http: HttpClient,
+    private translateService: TranslateService,
+  ) {
+    console.log(this.translateService.instant('affix.atk'));
+    this.allSuggestions = AffixUtils.getList(translateService);
     this.suggestions = [...this.allSuggestions];
     this.http.get('/assets/heroes.json').subscribe((data: unknown) => {
       this.allHeroes = (data as HeroJson[]).map((d) => {
@@ -44,17 +50,18 @@ export class HomeComponent {
         return new Hero(d.name, collections, d.stats[0], d.stats[1]);
       });
     });
-    this.allCollections = CollectionUtils.getList();
+    this.allCollections = CollectionUtils.getList(translateService);
+    console.log(this.allCollections);
   }
 
   public search(event: { query: string }): void {
     this.suggestions = this.allSuggestions.filter((affix) =>
-      affix.includes(event.query),
+      affix.name.toLowerCase().includes(event.query),
     );
   }
 
   public select(event: AutoCompleteSelectEvent): void {
-    this.affixes.push({ name: event.value });
+    this.affixes.push(event.value as Affix);
     this.selectedAffix = undefined;
     this.updateHeroes();
   }
@@ -74,7 +81,7 @@ export class HomeComponent {
     if (this.selectedCollection) {
       heroes = heroes.filter((hero) => {
         return hero.collections.find(
-          (coll) => coll.name === this.selectedCollection,
+          (coll) => coll.name === this.selectedCollection?.code,
         );
       });
     }

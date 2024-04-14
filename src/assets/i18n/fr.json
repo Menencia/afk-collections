@@ -1,0 +1,41 @@
+{
+  "affix": {
+    "atk": "ATK",
+    "cda": "CDA",
+    "crit": "CRIT",
+    "err": "ERR",
+    "erosion": "Erosion",
+    "f-atk": "Full ATK",
+    "f-erosion": "Full Erosion",
+    "is": "IS",
+    "ll": "LL",
+    "mp": "MP",
+    "pp": "PP",
+    "prf": "PRF",
+    "armor": "Armor",
+    "buffer": "Mitigation",
+    "cbr": "CBR",
+    "cdr": "CDR",
+    "def": "DEF",
+    "diss": "DISS",
+    "dmg-r": "DMG Resist",
+    "f-buffer": "Full Buffer",
+    "f-def": "Full DEF",
+    "f-hp": "Full HP",
+    "heal": "HEAL",
+    "hp": "HP",
+    "ty": "TÉ"
+  },
+  "collection": {
+    "zolrath": "Couvercle temporel",
+    "saurus": "Danseur obscur",
+    "orthros": "Chronologie",
+    "daimon": "Servitude magique",
+    "athalia": "Armure d'ordalie",
+    "tidus": "Crocs tumultueux",
+    "mehira": "Ailes captives",
+    "oden": "Oeil diabolique",
+    "rowan": "Chambre forte",
+    "tasi": "Cavalcade lumineuse"
+  }
+}

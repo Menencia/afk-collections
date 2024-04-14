@@ -10,21 +10,21 @@
       <ng-template pTemplate="selectedItem">
         <div class="flex align-items-center gap-2" *ngIf="selectedCollection">
           <img
-            src="/assets/collections/{{ selectedCollection }}.png"
-            alt="{{ selectedCollection }}"
+            src="/assets/collections/{{ selectedCollection.code }}.png"
+            alt="{{ selectedCollection.name }}"
             style="width: 18px"
           />
-          <div>{{ selectedCollection }}</div>
+          <div>{{ selectedCollection.name }}</div>
         </div>
       </ng-template>
       <ng-template let-collection pTemplate="item">
         <div class="flex align-items-center gap-2">
           <img
-            src="/assets/collections/{{ collection }}.png"
-            alt="{{ collection }}"
+            src="/assets/collections/{{ collection.code }}.png"
+            alt="{{ collection.name }}"
             style="width: 18px"
           />
-          <div>{{ collection }}</div>
+          <div>{{ collection.name }}</div>
         </div>
       </ng-template>
     </p-dropdown>
@@ -36,7 +36,7 @@
         label="{{ affix.name }}"
         removable="true"
         (onRemove)="removeAffix(affix)"
-        image="/assets/affixes/{{ affix.name }}.png"
+        image="/assets/affixes/{{ affix.code }}.png"
         alt="affix"
       ></p-chip>
     </div>
@@ -47,6 +47,7 @@
       [(ngModel)]="selectedAffix"
       [suggestions]="suggestions"
       [dropdown]="true"
+      field="name"
       (completeMethod)="search($event)"
       (onSelect)="select($event)"
     ></p-autoComplete>
@@ -60,7 +61,7 @@
         <div>
           <img
             *ngFor="let offAffix of result.hero.offAffixes"
-            pTooltip="{{ offAffix }}"
+            pTooltip="{{ 'affix.' + offAffix | translate }}"
             tooltipPosition="bottom"
             src="/assets/affixes/{{ offAffix }}.png"
             height="32"
@@ -70,7 +71,7 @@
         <div>
           <img
             *ngFor="let defAffix of result.hero.defAffixes"
-            pTooltip="{{ defAffix }}"
+            pTooltip="{{ 'affix.' + defAffix | translate }}"
             tooltipPosition="bottom"
             src="/assets/affixes/{{ defAffix }}.png"
             height="32"
