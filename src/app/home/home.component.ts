@@ -14,6 +14,8 @@ interface ResultHero {
   score: number;
 }
 
+const MAX_AFFIX_PRIORITIES = 4;
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -65,14 +67,14 @@ export class HomeComponent {
     // update scores
     let results: ResultHero[] = this.allHeroes.map((hero) => {
       let score = 0;
-      hero.offAffixes.forEach((offAffix) => {
+      hero.offAffixes.forEach((offAffix, index) => {
         if (this.affixes.map((s) => s.name).includes(offAffix)) {
-          score++;
+          score += MAX_AFFIX_PRIORITIES - index;
         }
       });
-      hero.defAffixes.forEach((defAffix) => {
+      hero.defAffixes.forEach((defAffix, index) => {
         if (this.affixes.map((s) => s.name).includes(defAffix)) {
-          score++;
+          score += MAX_AFFIX_PRIORITIES - index;
         }
       });
       return {
