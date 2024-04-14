@@ -14,7 +14,7 @@
             alt="{{ selectedCollection.name }}"
             style="width: 18px"
           />
-          <div>{{ selectedCollection.name }}</div>
+          <div>{{ "collection." + selectedCollection.code | translate }}</div>
         </div>
       </ng-template>
       <ng-template let-collection pTemplate="item">
@@ -24,7 +24,7 @@
             alt="{{ collection.name }}"
             style="width: 18px"
           />
-          <div>{{ collection.name }}</div>
+          <div>{{ "collection." + collection.code | translate }}</div>
         </div>
       </ng-template>
     </p-dropdown>
@@ -33,7 +33,7 @@
   <p-panel header="Affixes" styleClass="mb-3">
     <div *ngFor="let affix of affixes">
       <p-chip
-        label="{{ affix.name }}"
+        label="{{ 'affix.' + affix.code | translate }}"
         removable="true"
         (onRemove)="removeAffix(affix)"
         image="/assets/affixes/{{ affix.code }}.png"
@@ -50,7 +50,19 @@
       field="name"
       (completeMethod)="search($event)"
       (onSelect)="select($event)"
-    ></p-autoComplete>
+    >
+      <ng-template let-affix pTemplate="item">
+        <div class="flex align-items-center gap-2">
+          <img
+            src="/assets/affixes/{{ affix.code }}.png"
+            [class]="'flag flag-' + affix.code"
+            alt="affix"
+            style="width: 18px"
+          />
+          <div>{{ "affix." + affix.code | translate }}</div>
+        </div>
+      </ng-template>
+    </p-autoComplete>
   </p-panel>
 
   <p-panel header="Results" styleClass="mb-3">

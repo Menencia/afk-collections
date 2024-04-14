@@ -39,7 +39,6 @@ export class HomeComponent {
     private http: HttpClient,
     private translateService: TranslateService,
   ) {
-    console.log(this.translateService.instant('affix.atk'));
     this.allSuggestions = AffixUtils.getList(translateService);
     this.suggestions = [...this.allSuggestions];
     this.http.get('/assets/heroes.json').subscribe((data: unknown) => {
@@ -51,10 +50,10 @@ export class HomeComponent {
       });
     });
     this.allCollections = CollectionUtils.getList(translateService);
-    console.log(this.allCollections);
   }
 
   public search(event: { query: string }): void {
+    this.allSuggestions = AffixUtils.getList(this.translateService);
     this.suggestions = this.allSuggestions.filter((affix) =>
       affix.name.toLowerCase().includes(event.query),
     );
@@ -95,12 +94,12 @@ export class HomeComponent {
     let results: ResultHero[] = heroes.map((hero) => {
       let score = 0;
       hero.offAffixes.forEach((offAffix, index) => {
-        if (this.affixes.map((s) => s.name).includes(offAffix)) {
+        if (this.affixes.map((s) => s.code).includes(offAffix)) {
           score += MAX_AFFIX_PRIORITIES - index;
         }
       });
       hero.defAffixes.forEach((defAffix, index) => {
-        if (this.affixes.map((s) => s.name).includes(defAffix)) {
+        if (this.affixes.map((s) => s.code).includes(defAffix)) {
           score += MAX_AFFIX_PRIORITIES - index;
         }
       });

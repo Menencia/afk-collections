@@ -1,8 +1,23 @@
 <nav
   class="flex items-center gap-5 p-3 bg-gray-200 dark:bg-gray-800 dark:text-white"
-  id="step10"
 >
   <h1>AFK Arena - tool for collections</h1>
+  <div>
+    <a
+      href="javascript:void();"
+      (click)="changeLocale('en')"
+      [class]="{ 'font-bold': isLocale('en') }"
+      >EN</a
+    >
+  </div>
+  <div>
+    <a
+      href="javascript:void();"
+      (click)="changeLocale('fr')"
+      [class]="{ 'font-bold': isLocale('fr') }"
+      >FR</a
+    >
+  </div>
 </nav>
 
 <router-outlet></router-outlet>
