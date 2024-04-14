@@ -35,6 +35,9 @@ export class HomeComponent {
   private allSuggestions: { code: string; name: string }[];
   private allHeroes: Hero[] = [];
 
+  public selectCollectionPl?: string;
+  public addAffixPl?: string;
+
   constructor(
     private http: HttpClient,
     private translateService: TranslateService,
@@ -50,6 +53,11 @@ export class HomeComponent {
       });
     });
     this.allCollections = CollectionUtils.getList(translateService);
+    this.translateService.onLangChange.subscribe(() => {
+      this.selectCollectionPl =
+        this.translateService.instant('Select collection');
+      this.addAffixPl = this.translateService.instant('Add affix');
+    });
   }
 
   public search(event: { query: string }): void {

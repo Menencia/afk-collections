@@ -4,7 +4,7 @@
       [options]="allCollections"
       [(ngModel)]="selectedCollection"
       optionLabel="name"
-      [placeholder]="'Select a collection' | translate"
+      [placeholder]="selectCollectionPl"
       [showClear]="true"
       (onChange)="updateHeroes()"
     >
@@ -47,7 +47,7 @@
     <p-autoComplete
       [(ngModel)]="selectedAffix"
       [suggestions]="suggestions"
-      [placeholder]="'Add an affix' | translate"
+      [placeholder]="addAffixPl"
       [dropdown]="true"
       field="name"
       (completeMethod)="search($event)"

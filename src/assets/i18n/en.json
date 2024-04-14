@@ -38,7 +38,9 @@
     "rowan": "Trader's Vault",
     "tasi": "Luminous Flight"
   },
-  "Select a collection": "Select a collection",
+  "tool.collections": "tool for collections",
+  "Select collection": "Select collection",
+  "Affixes": "Affixes",
   "Add affix": "Add affix",
   "Results": "Results"
 }
