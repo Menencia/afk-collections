@@ -1,1 +1,11 @@
-<p>Add stat:</p>
+<p>Stats</p>
+
+<div *ngFor="let stat of stats">{{ stat }}</div>
+
+<p-autoComplete
+  [(ngModel)]="selectedStat"
+  [suggestions]="suggestions"
+  [dropdown]="true"
+  (completeMethod)="search($event)"
+  (onSelect)="select($event)"
+></p-autoComplete>
