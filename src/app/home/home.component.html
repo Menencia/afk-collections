@@ -1,3 +1,9 @@
+<p>Heroes</p>
+
+<div *ngFor="let result of results">
+  {{ result.hero.name }} (score: {{ result.score }})
+</div>
+
 <p>Stats</p>
 
 <div *ngFor="let stat of stats">
@@ -9,6 +15,8 @@
     class="pi pi-times"
   ></i>
 </div>
+
+<p>Add stat :</p>
 
 <p-autoComplete
   [(ngModel)]="selectedStat"
