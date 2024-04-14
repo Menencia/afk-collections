@@ -6,7 +6,7 @@ export abstract class CollectionUtils {
       'orthros',
       'daimon',
       'athalia',
-      'baden',
+      'tidus',
       'mehira',
       'oden',
       'rowan',
