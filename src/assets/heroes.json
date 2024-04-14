@@ -6,5 +6,237 @@
       ["mp", "err", "atk", "adc"],
       ["dmg-r", "rdc", "def", "hp"]
     ]
+  },
+  {
+    "name": "palmer",
+    "colls": [["tasi", 0], ["rowan", 2]],
+    "stats": [
+      ["mp", "err", "adc", "f-atk"],
+      ["dmg-r", "rdc", "def", "f-def"]
+    ]
+  },
+  {
+    "name": "lavatune",
+    "colls": [["tasi", 0]],
+    "stats": [
+      ["err", "f-atk"],
+      ["dmg-r", "rdc", "def", "f-def"]
+    ]
+  },
+  {
+    "name": "rosaline",
+    "colls": [["tasi", 0], ["rowan", 2]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["dmg-r", "rdc", "f-def", "f-hp"]
+    ]
+  },
+  {
+    "name": "daemia",
+    "colls": [["mehira", 2]],
+    "stats": [
+      ["mp", "atk", "adc", "f-atk"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "eugene",
+    "colls": [["oden", 2], ["mehira", 2]],
+    "stats": [
+      ["erosion", "atk", "err", "f-erosion"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "a-solise",
+    "colls": [["rowan", 2], ["tasi", 0]],
+    "stats": [
+      ["f-atk", "f-erosion", "atk"],
+      ["heal", "f-def", "dmg-r", "rdc"]
+    ]
+  },
+  {
+    "name": "grezhul",
+    "colls": [["daimon", 1]],
+    "stats": [
+      ["atk", "pp", "f-atk", "f-erosion"],
+      ["diss", "dmg-r", "rdc", "f-def"]
+    ]
+  },
+  {
+    "name": "mortas",
+    "colls": [["rowan", 2], ["tasi", 0]],
+    "stats": [
+      ["f-atk", "f-erosion"],
+      ["f-def", "f-hp", "heal"]
+    ]
+  },
+  {
+    "name": "elijah-and-lailah",
+    "colls": [["rowan", 2], ["tasi", 0]],
+    "stats": [
+      ["err", "f-atk", "ero"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "trishea",
+    "colls": [["mehira", 2]],
+    "stats": [
+      ["mp", "err", "atk", "erosion"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "liberta",
+    "colls": [["tasi", 0]],
+    "stats": [
+      ["atk", "erosion", "adc", "err"],
+      ["heal", "dmg-r", "rdc", "hp"]
+    ]
+  },
+  {
+    "name": "lucilla",
+    "colls": [["rowan", 2], ["tasi", 0]],
+    "stats": [
+      ["prf", "is", "f-atk", "f-erosion"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "a-athalia",
+    "colls": [["saurus", 1]],
+    "stats": [
+      ["pp", "adc", "atk", "crit"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "jerome",
+    "colls": [["zolrath", 1], ["saurus", 1]],
+    "stats": [
+      ["f-atk", "atk", "f-erosion"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "ivan",
+    "colls": [["rowan", 2], ["tasi", 0]],
+    "stats": [
+      ["err", "f-atk", "atk", "f-erosion"],
+      ["f-def", "f-hp", "dmg-r", "rdc"]
+    ]
+  },
+  {
+    "name": "rem",
+    "colls": [["saurus", 1]],
+    "stats": [
+      ["adc", "pp", "atk", "crit"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "naroko",
+    "colls": [["daimon", 1]],
+    "stats": [
+      ["f-atk", "atk"],
+      ["heal", "def", "f-def", "f-hp"]
+    ]
+  },
+  {
+    "name": "atheus",
+    "colls": [["daimon", 1]],
+    "stats": [
+      ["is", "prf", "f-atk", "f-erosion"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "saurus",
+    "colls": [["saurus", 1]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "baden",
+    "colls": [["saurus", 1]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "nevanthi",
+    "colls": [["rowan", 2], ["tasi", 0]],
+    "stats": [
+      ["f-atk", "atk", "err"],
+      ["hp", "f-hp", "f-def", "dmg-r"]
+    ]
+  },
+  {
+    "name": "a-safiya",
+    "colls": [["rowan", 2], ["tasi", 0]],
+    "stats": [
+      ["f-atk", "erosion", "prf", "err"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "raine",
+    "colls": [["rowan", 2], ["tasi", 0]],
+    "stats": [
+      ["err", "f-atk", "f-erosion"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "joan",
+    "colls": [["rowan", 2], ["tasi", 0]],
+    "stats": [
+      ["f-atk", "err", "f-erosion"],
+      ["dmg-r", "rdc", "f-hp", "f-def"]
+    ]
+  },
+  {
+    "name": "silas",
+    "colls": [["rowan", 2], ["tasi", 0]],
+    "stats": [
+      ["f-atk", "atk", "err"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "veithael",
+    "colls": [["daimon", 1]],
+    "stats": [
+      ["f-atk", "atk"],
+      ["hp", "f-hp", "dmg-r", "rdc"]
+    ]
+  },
+  {
+    "name": "a-lyca",
+    "colls": [["athalia", 2]],
+    "stats": [
+      ["crit", "adc", "pp", "atk"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "anasta",
+    "colls": [["saurus", 1]],
+    "stats": [
+      ["atk", "pp", "adc", "crit"],
+      ["dmg-r", "rdc", "def", "hp"]
+    ]
+  },
+  {
+    "name": "estrilda",
+    "colls": [["zolrath", 1], ["saurus", 1]],
+    "stats": [
+      ["f-atk", "atk", "err"],
+      ["f-hp", "f-def", "dmg-r", "rdc"]
+    ]
   }
 ]
