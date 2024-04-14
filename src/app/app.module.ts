@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { UiLayoutDefaultComponent } from './shared/ui/ui-layout-default/ui-layout-default.component';
 
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { ChipModule } from 'primeng/chip';
@@ -16,7 +19,7 @@ import { TooltipModule } from 'primeng/tooltip';
 import { PanelModule } from 'primeng/panel';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, UiLayoutDefaultComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
