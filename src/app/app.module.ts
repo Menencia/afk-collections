@@ -12,6 +12,7 @@ import { ChipModule } from 'primeng/chip';
 import { CardModule } from 'primeng/card';
 import { TagModule } from 'primeng/tag';
 import { DropdownModule } from 'primeng/dropdown';
+import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -26,6 +27,7 @@ import { DropdownModule } from 'primeng/dropdown';
     CardModule,
     TagModule,
     DropdownModule,
+    TooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

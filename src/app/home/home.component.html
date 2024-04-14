@@ -59,6 +59,8 @@
     <div>
       <img
         *ngFor="let offAffix of result.hero.offAffixes"
+        pTooltip="{{ offAffix }}"
+        tooltipPosition="bottom"
         src="/assets/affixes/{{ offAffix }}.png"
         height="32"
         alt="{{ offAffix }}"
@@ -67,6 +69,8 @@
     <div>
       <img
         *ngFor="let defAffix of result.hero.defAffixes"
+        pTooltip="{{ defAffix }}"
+        tooltipPosition="bottom"
         src="/assets/affixes/{{ defAffix }}.png"
         height="32"
         alt="{{ defAffix }}"
