@@ -19,6 +19,7 @@ import { TagModule } from 'primeng/tag';
 import { DropdownModule } from 'primeng/dropdown';
 import { TooltipModule } from 'primeng/tooltip';
 import { PanelModule } from 'primeng/panel';
+import { BadgeModule } from 'primeng/badge';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -46,6 +47,7 @@ export function createTranslateLoader(http: HttpClient) {
     DropdownModule,
     TooltipModule,
     PanelModule,
+    BadgeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

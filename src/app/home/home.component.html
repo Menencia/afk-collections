@@ -9,7 +9,7 @@
       (onChange)="updateHeroes()"
     >
       <ng-template pTemplate="selectedItem">
-        <div class="flex align-items-center gap-2" *ngIf="selectedCollection">
+        <div class="flex items-center gap-2" *ngIf="selectedCollection">
           <img
             src="/assets/collections/{{ selectedCollection.code }}.png"
             alt="{{ selectedCollection.name }}"
@@ -19,7 +19,7 @@
         </div>
       </ng-template>
       <ng-template let-collection pTemplate="item">
-        <div class="flex align-items-center gap-2">
+        <div class="flex items-center gap-2">
           <img
             src="/assets/collections/{{ collection.code }}.png"
             alt="{{ collection.name }}"
@@ -54,7 +54,7 @@
       (onSelect)="select($event)"
     >
       <ng-template let-affix pTemplate="item">
-        <div class="flex align-items-center gap-2">
+        <div class="flex items-center gap-2">
           <img
             src="/assets/affixes/{{ affix.code }}.png"
             [class]="'flag flag-' + affix.code"
@@ -72,6 +72,18 @@
       <p-card *ngFor="let result of results">
         {{ result.hero.name | titlecase }}
         <p-tag [value]="result.score + ' pts'" severity="info"></p-tag>
+        <div>
+          <ng-container *ngFor="let collection of result.hero.collections">
+            <img
+              pTooltip="{{ 'collection.' + collection.name | translate }}"
+              tooltipPosition="bottom"
+              src="/assets/collections/{{ collection.name }}.png"
+              class="h-8 inline-block"
+              alt="collection"
+            />
+            <p-badge value="{{ collection.level }}"></p-badge>
+          </ng-container>
+        </div>
         <div>
           <img
             *ngFor="let offAffix of result.hero.offAffixes"
