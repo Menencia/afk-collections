@@ -1,25 +1,25 @@
-<p>Heroes</p>
+<p>Results</p>
 
 <div *ngFor="let result of results">
   {{ result.hero.name }} (score: {{ result.score }})
 </div>
 
-<p>Stats</p>
+<p>Affixes</p>
 
-<div *ngFor="let stat of stats">
-  {{ stat.name }}
-  <i
-    (click)="removeStat(stat)"
-    (keypress)="removeStat(stat)"
-    tabindex="0"
-    class="pi pi-times"
-  ></i>
+<div *ngFor="let affix of affixes">
+  <p-chip
+    label="{{ affix.name }}"
+    removable="true"
+    (onRemove)="removeAffix(affix)"
+    image="/assets/affixes/{{ affix.name }}.png"
+    alt="affix"
+  ></p-chip>
 </div>
 
-<p>Add stat :</p>
+<p>Add affix :</p>
 
 <p-autoComplete
-  [(ngModel)]="selectedStat"
+  [(ngModel)]="selectedAffix"
   [suggestions]="suggestions"
   [dropdown]="true"
   (completeMethod)="search($event)"

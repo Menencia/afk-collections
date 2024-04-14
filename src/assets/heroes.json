@@ -4,7 +4,7 @@
     "colls": [["oden", 2]],
     "stats": [
       ["mp", "err", "atk", "adc"],
-      ["dmg.r", "rdc", "def", "hp"]
+      ["dmg-r", "rdc", "def", "hp"]
     ]
   }
 ]

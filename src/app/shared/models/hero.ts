@@ -26,7 +26,7 @@ export class Hero {
   constructor(
     public name: string,
     public collections: Collection[],
-    public offStats: string[],
-    public defStats: string[],
+    public offAffixes: string[],
+    public defAffixes: string[],
   ) {}
 }

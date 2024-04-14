@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { AutoCompleteSelectEvent } from 'primeng/autocomplete';
 import { Hero, HeroJson } from '../shared/models/hero';
 import { HttpClient } from '@angular/common/http';
+import { AffixUtils } from '../shared/utils/affix.utils';
 
-interface Stat {
+interface Affix {
   name: string;
   level?: string;
 }
@@ -19,16 +20,16 @@ interface ResultHero {
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  public selectedStat?: Stat;
+  public selectedAffix?: Affix;
   public suggestions: string[];
-  public stats: Stat[] = [];
+  public affixes: Affix[] = [];
   public results: ResultHero[] = [];
 
   private allSuggestions: string[];
   private allHeroes: Hero[] = [];
 
   constructor(private http: HttpClient) {
-    this.allSuggestions = ['atk', 'err'];
+    this.allSuggestions = AffixUtils.getList();
     this.suggestions = [...this.allSuggestions];
     this.http.get('/assets/heroes.json').subscribe((data: unknown) => {
       this.allHeroes = (data as HeroJson[]).map((d) => {
@@ -41,20 +42,19 @@ export class HomeComponent {
   }
 
   public search(event: { query: string }): void {
-    this.suggestions = this.suggestions.filter((stat) =>
-      stat.includes(event.query),
+    this.suggestions = this.allSuggestions.filter((affix) =>
+      affix.includes(event.query),
     );
   }
 
   public select(event: AutoCompleteSelectEvent): void {
-    this.stats.push({ name: event.value });
-    this.suggestions = [...this.allSuggestions];
-    this.selectedStat = undefined;
+    this.affixes.push({ name: event.value });
+    this.selectedAffix = undefined;
     this.updateHeroes();
   }
 
-  public removeStat(stat: Stat): void {
-    this.stats = this.stats.filter((s) => s !== stat);
+  public removeAffix(affix: Affix): void {
+    this.affixes = this.affixes.filter((s) => s !== affix);
     this.updateHeroes();
   }
 
@@ -65,13 +65,13 @@ export class HomeComponent {
     // update scores
     let results: ResultHero[] = this.allHeroes.map((hero) => {
       let score = 0;
-      hero.offStats.forEach((offStat) => {
-        if (this.stats.map((s) => s.name).includes(offStat)) {
+      hero.offAffixes.forEach((offAffix) => {
+        if (this.affixes.map((s) => s.name).includes(offAffix)) {
           score++;
         }
       });
-      hero.defStats.forEach((defStat) => {
-        if (this.stats.map((s) => s.name).includes(defStat)) {
+      hero.defAffixes.forEach((defAffix) => {
+        if (this.affixes.map((s) => s.name).includes(defAffix)) {
           score++;
         }
       });
