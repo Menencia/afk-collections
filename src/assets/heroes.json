@@ -3,16 +3,16 @@
     "name": "a-belinda",
     "colls": [["oden", 2]],
     "stats": [
-      ["mp", "err", "atk", "adc"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["mp", "err", "atk", "cda"],
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
     "name": "palmer",
     "colls": [["tasi", 0], ["rowan", 2]],
     "stats": [
-      ["mp", "err", "adc", "f-atk"],
-      ["dmg-r", "rdc", "def", "f-def"]
+      ["mp", "err", "cda", "f-atk"],
+      ["dmg-r", "cdr", "def", "f-def"]
     ]
   },
   {
@@ -20,7 +20,7 @@
     "colls": [["tasi", 0]],
     "stats": [
       ["err", "f-atk"],
-      ["dmg-r", "rdc", "def", "f-def"]
+      ["dmg-r", "cdr", "def", "f-def"]
     ]
   },
   {
@@ -28,15 +28,15 @@
     "colls": [["tasi", 0], ["rowan", 2]],
     "stats": [
       ["atk", "f-atk"],
-      ["dmg-r", "rdc", "f-def", "f-hp"]
+      ["dmg-r", "cdr", "f-def", "f-hp"]
     ]
   },
   {
     "name": "daemia",
     "colls": [["mehira", 2]],
     "stats": [
-      ["mp", "atk", "adc", "f-atk"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["mp", "atk", "cda", "f-atk"],
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
@@ -44,7 +44,7 @@
     "colls": [["oden", 2], ["mehira", 2]],
     "stats": [
       ["erosion", "atk", "err", "f-erosion"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
@@ -52,7 +52,7 @@
     "colls": [["rowan", 2], ["tasi", 0]],
     "stats": [
       ["f-atk", "f-erosion", "atk"],
-      ["heal", "f-def", "dmg-r", "rdc"]
+      ["heal", "f-def", "dmg-r", "cdr"]
     ]
   },
   {
@@ -60,7 +60,7 @@
     "colls": [["daimon", 1]],
     "stats": [
       ["atk", "pp", "f-atk", "f-erosion"],
-      ["diss", "dmg-r", "rdc", "f-def"]
+      ["diss", "dmg-r", "cdr", "f-def"]
     ]
   },
   {
@@ -76,7 +76,7 @@
     "colls": [["rowan", 2], ["tasi", 0]],
     "stats": [
       ["err", "f-atk", "ero"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
@@ -84,15 +84,15 @@
     "colls": [["mehira", 2]],
     "stats": [
       ["mp", "err", "atk", "erosion"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
     "name": "liberta",
     "colls": [["tasi", 0]],
     "stats": [
-      ["atk", "erosion", "adc", "err"],
-      ["heal", "dmg-r", "rdc", "hp"]
+      ["atk", "erosion", "cda", "err"],
+      ["heal", "dmg-r", "cdr", "hp"]
     ]
   },
   {
@@ -100,15 +100,15 @@
     "colls": [["rowan", 2], ["tasi", 0]],
     "stats": [
       ["prf", "is", "f-atk", "f-erosion"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
     "name": "a-athalia",
     "colls": [["saurus", 1]],
     "stats": [
-      ["pp", "adc", "atk", "crit"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["pp", "cda", "atk", "crit"],
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
@@ -116,7 +116,7 @@
     "colls": [["zolrath", 1], ["saurus", 1]],
     "stats": [
       ["f-atk", "atk", "f-erosion"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
@@ -124,15 +124,15 @@
     "colls": [["rowan", 2], ["tasi", 0]],
     "stats": [
       ["err", "f-atk", "atk", "f-erosion"],
-      ["f-def", "f-hp", "dmg-r", "rdc"]
+      ["f-def", "f-hp", "dmg-r", "cdr"]
     ]
   },
   {
     "name": "rem",
     "colls": [["saurus", 1]],
     "stats": [
-      ["adc", "pp", "atk", "crit"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["cda", "pp", "atk", "crit"],
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
@@ -148,7 +148,7 @@
     "colls": [["daimon", 1]],
     "stats": [
       ["is", "prf", "f-atk", "f-erosion"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
@@ -156,7 +156,7 @@
     "colls": [["saurus", 1]],
     "stats": [
       ["atk", "f-atk"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
@@ -164,7 +164,7 @@
     "colls": [["saurus", 1]],
     "stats": [
       ["atk", "f-atk"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
@@ -180,7 +180,7 @@
     "colls": [["rowan", 2], ["tasi", 0]],
     "stats": [
       ["f-atk", "erosion", "prf", "err"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
@@ -188,7 +188,7 @@
     "colls": [["rowan", 2], ["tasi", 0]],
     "stats": [
       ["err", "f-atk", "f-erosion"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
@@ -196,7 +196,7 @@
     "colls": [["rowan", 2], ["tasi", 0]],
     "stats": [
       ["f-atk", "err", "f-erosion"],
-      ["dmg-r", "rdc", "f-hp", "f-def"]
+      ["dmg-r", "cdr", "f-hp", "f-def"]
     ]
   },
   {
@@ -204,7 +204,7 @@
     "colls": [["rowan", 2], ["tasi", 0]],
     "stats": [
       ["f-atk", "atk", "err"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
@@ -212,23 +212,23 @@
     "colls": [["daimon", 1]],
     "stats": [
       ["f-atk", "atk"],
-      ["hp", "f-hp", "dmg-r", "rdc"]
+      ["hp", "f-hp", "dmg-r", "cdr"]
     ]
   },
   {
     "name": "a-lyca",
     "colls": [["athalia", 2]],
     "stats": [
-      ["crit", "adc", "pp", "atk"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["crit", "cda", "pp", "atk"],
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
     "name": "anasta",
     "colls": [["saurus", 1]],
     "stats": [
-      ["atk", "pp", "adc", "crit"],
-      ["dmg-r", "rdc", "def", "hp"]
+      ["atk", "pp", "cda", "crit"],
+      ["dmg-r", "cdr", "def", "hp"]
     ]
   },
   {
@@ -236,7 +236,7 @@
     "colls": [["zolrath", 1], ["saurus", 1]],
     "stats": [
       ["f-atk", "atk", "err"],
-      ["f-hp", "f-def", "dmg-r", "rdc"]
+      ["f-hp", "f-def", "dmg-r", "cdr"]
     ]
   }
 ]

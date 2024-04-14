@@ -1,0 +1,19 @@
+.results {
+  display: flex;
+  gap: 1em;
+}
+
+:ng-deep .p-card {
+  width: 200px;
+  display: inline-block;
+}
+
+:ng-deep .p-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+:ng-deep .p-knob {
+  display: inline-block;
+}

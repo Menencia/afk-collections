@@ -1,7 +1,26 @@
 <p>Results</p>
 
-<div *ngFor="let result of results">
-  {{ result.hero.name }} (score: {{ result.score }})
+<div class="results">
+  <p-card *ngFor="let result of results">
+    {{ result.hero.name | titlecase }}
+    <p-tag [value]="result.score + ' pts'" severity="info"></p-tag>
+    <div>
+      <img
+        *ngFor="let offAffix of result.hero.offAffixes"
+        src="/assets/affixes/{{ offAffix }}.png"
+        height="32"
+        alt="{{ offAffix }}"
+      />
+    </div>
+    <div>
+      <img
+        *ngFor="let defAffix of result.hero.defAffixes"
+        src="/assets/affixes/{{ defAffix }}.png"
+        height="32"
+        alt="{{ defAffix }}"
+      />
+    </div>
+  </p-card>
 </div>
 
 <p>Affixes</p>
