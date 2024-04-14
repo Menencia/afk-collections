@@ -23,6 +23,36 @@
   </p-card>
 </div>
 
+<p>Collection :</p>
+<p-dropdown
+  [options]="allCollections"
+  [(ngModel)]="selectedCollection"
+  optionLabel="name"
+  [showClear]="true"
+  (onChange)="updateHeroes()"
+>
+  <ng-template pTemplate="selectedItem">
+    <div class="flex align-items-center gap-2" *ngIf="selectedCollection">
+      <img
+        src="/assets/collections/{{ selectedCollection }}.png"
+        alt="{{ selectedCollection }}"
+        style="width: 18px"
+      />
+      <div>{{ selectedCollection }}</div>
+    </div>
+  </ng-template>
+  <ng-template let-collection pTemplate="item">
+    <div class="flex align-items-center gap-2">
+      <img
+        src="/assets/collections/{{ collection }}.png"
+        alt="{{ collection }}"
+        style="width: 18px"
+      />
+      <div>{{ collection }}</div>
+    </div>
+  </ng-template>
+</p-dropdown>
+
 <p>Affixes</p>
 
 <div *ngFor="let affix of affixes">

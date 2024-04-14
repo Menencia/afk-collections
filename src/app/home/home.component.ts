@@ -3,6 +3,7 @@ import { AutoCompleteSelectEvent } from 'primeng/autocomplete';
 import { Hero, HeroJson } from '../shared/models/hero';
 import { HttpClient } from '@angular/common/http';
 import { AffixUtils } from '../shared/utils/affix.utils';
+import { CollectionUtils } from '../shared/utils/collection.utils';
 
 interface Affix {
   name: string;
@@ -26,6 +27,8 @@ export class HomeComponent {
   public suggestions: string[];
   public affixes: Affix[] = [];
   public results: ResultHero[] = [];
+  public selectedCollection?: string;
+  public allCollections: string[];
 
   private allSuggestions: string[];
   private allHeroes: Hero[] = [];
@@ -41,6 +44,7 @@ export class HomeComponent {
         return new Hero(d.name, collections, d.stats[0], d.stats[1]);
       });
     });
+    this.allCollections = CollectionUtils.getList();
   }
 
   public search(event: { query: string }): void {
@@ -64,8 +68,24 @@ export class HomeComponent {
    * Show 5 heroes with best scores
    */
   updateHeroes(): void {
+    // filter by selected collection
+    let heroes = this.allHeroes;
+
+    if (this.selectedCollection) {
+      heroes = heroes.filter((hero) => {
+        return hero.collections.find(
+          (coll) => coll.name === this.selectedCollection,
+        );
+      });
+    }
+
+    if (this.affixes.length === 0) {
+      this.results = [];
+      return;
+    }
+
     // update scores
-    let results: ResultHero[] = this.allHeroes.map((hero) => {
+    let results: ResultHero[] = heroes.map((hero) => {
       let score = 0;
       hero.offAffixes.forEach((offAffix, index) => {
         if (this.affixes.map((s) => s.name).includes(offAffix)) {

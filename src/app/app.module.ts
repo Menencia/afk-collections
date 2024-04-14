@@ -11,6 +11,7 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { ChipModule } from 'primeng/chip';
 import { CardModule } from 'primeng/card';
 import { TagModule } from 'primeng/tag';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -24,6 +25,7 @@ import { TagModule } from 'primeng/tag';
     ChipModule,
     CardModule,
     TagModule,
+    DropdownModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
