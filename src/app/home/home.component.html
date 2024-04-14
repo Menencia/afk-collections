@@ -1,80 +1,81 @@
-<p>Collection :</p>
-<p-dropdown
-  [options]="allCollections"
-  [(ngModel)]="selectedCollection"
-  optionLabel="name"
-  [showClear]="true"
-  (onChange)="updateHeroes()"
->
-  <ng-template pTemplate="selectedItem">
-    <div class="flex align-items-center gap-2" *ngIf="selectedCollection">
-      <img
-        src="/assets/collections/{{ selectedCollection }}.png"
-        alt="{{ selectedCollection }}"
-        style="width: 18px"
-      />
-      <div>{{ selectedCollection }}</div>
-    </div>
-  </ng-template>
-  <ng-template let-collection pTemplate="item">
-    <div class="flex align-items-center gap-2">
-      <img
-        src="/assets/collections/{{ collection }}.png"
-        alt="{{ collection }}"
-        style="width: 18px"
-      />
-      <div>{{ collection }}</div>
-    </div>
-  </ng-template>
-</p-dropdown>
+<p-panel header="Collection">
+  <p-dropdown
+    [options]="allCollections"
+    [(ngModel)]="selectedCollection"
+    optionLabel="name"
+    [showClear]="true"
+    (onChange)="updateHeroes()"
+  >
+    <ng-template pTemplate="selectedItem">
+      <div class="flex align-items-center gap-2" *ngIf="selectedCollection">
+        <img
+          src="/assets/collections/{{ selectedCollection }}.png"
+          alt="{{ selectedCollection }}"
+          style="width: 18px"
+        />
+        <div>{{ selectedCollection }}</div>
+      </div>
+    </ng-template>
+    <ng-template let-collection pTemplate="item">
+      <div class="flex align-items-center gap-2">
+        <img
+          src="/assets/collections/{{ collection }}.png"
+          alt="{{ collection }}"
+          style="width: 18px"
+        />
+        <div>{{ collection }}</div>
+      </div>
+    </ng-template>
+  </p-dropdown>
+</p-panel>
 
-<p>Affixes</p>
+<p-panel header="Affixes">
+  <div *ngFor="let affix of affixes">
+    <p-chip
+      label="{{ affix.name }}"
+      removable="true"
+      (onRemove)="removeAffix(affix)"
+      image="/assets/affixes/{{ affix.name }}.png"
+      alt="affix"
+    ></p-chip>
+  </div>
 
-<div *ngFor="let affix of affixes">
-  <p-chip
-    label="{{ affix.name }}"
-    removable="true"
-    (onRemove)="removeAffix(affix)"
-    image="/assets/affixes/{{ affix.name }}.png"
-    alt="affix"
-  ></p-chip>
-</div>
+  <p>Add affix :</p>
 
-<p>Add affix :</p>
+  <p-autoComplete
+    [(ngModel)]="selectedAffix"
+    [suggestions]="suggestions"
+    [dropdown]="true"
+    (completeMethod)="search($event)"
+    (onSelect)="select($event)"
+  ></p-autoComplete>
+</p-panel>
 
-<p-autoComplete
-  [(ngModel)]="selectedAffix"
-  [suggestions]="suggestions"
-  [dropdown]="true"
-  (completeMethod)="search($event)"
-  (onSelect)="select($event)"
-></p-autoComplete>
-
-<p>Results</p>
-
-<div class="results">
-  <p-card *ngFor="let result of results">
-    {{ result.hero.name | titlecase }}
-    <p-tag [value]="result.score + ' pts'" severity="info"></p-tag>
-    <div>
-      <img
-        *ngFor="let offAffix of result.hero.offAffixes"
-        pTooltip="{{ offAffix }}"
-        tooltipPosition="bottom"
-        src="/assets/affixes/{{ offAffix }}.png"
-        height="32"
-        alt="{{ offAffix }}"
-      />
-    </div>
-    <div>
-      <img
-        *ngFor="let defAffix of result.hero.defAffixes"
-        pTooltip="{{ defAffix }}"
-        tooltipPosition="bottom"
-        src="/assets/affixes/{{ defAffix }}.png"
-        height="32"
-        alt="{{ defAffix }}"
-      />
-    </div>
-  </p-card>
-</div>
+<p-panel header="Results">
+  <div class="results">
+    <p-card *ngFor="let result of results">
+      {{ result.hero.name | titlecase }}
+      <p-tag [value]="result.score + ' pts'" severity="info"></p-tag>
+      <div>
+        <img
+          *ngFor="let offAffix of result.hero.offAffixes"
+          pTooltip="{{ offAffix }}"
+          tooltipPosition="bottom"
+          src="/assets/affixes/{{ offAffix }}.png"
+          height="32"
+          alt="{{ offAffix }}"
+        />
+      </div>
+      <div>
+        <img
+          *ngFor="let defAffix of result.hero.defAffixes"
+          pTooltip="{{ defAffix }}"
+          tooltipPosition="bottom"
+          src="/assets/affixes/{{ defAffix }}.png"
+          height="32"
+          alt="{{ defAffix }}"
+        />
+      </div>
+    </p-card>
+  </div>
+</p-panel>

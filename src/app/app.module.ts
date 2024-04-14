@@ -13,6 +13,7 @@ import { CardModule } from 'primeng/card';
 import { TagModule } from 'primeng/tag';
 import { DropdownModule } from 'primeng/dropdown';
 import { TooltipModule } from 'primeng/tooltip';
+import { PanelModule } from 'primeng/panel';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -28,6 +29,7 @@ import { TooltipModule } from 'primeng/tooltip';
     TagModule,
     DropdownModule,
     TooltipModule,
+    PanelModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
