@@ -68,7 +68,7 @@
   </p-panel>
 
   <p-panel [header]="'Results' | translate" styleClass="mb-3">
-    <div class="results">
+    <div class="flex gap-2 flex-wrap">
       <p-card *ngFor="let result of results">
         {{ result.hero.name | titlecase }}
         <p-tag [value]="result.score + ' pts'" severity="info"></p-tag>
