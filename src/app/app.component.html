@@ -4,16 +4,16 @@
   <h1>AFK Arena - tool for collections</h1>
   <div>
     <a
-      href="javascript:void();"
-      (click)="changeLocale('en')"
+      href="#"
+      (click)="changeLocale($event, 'en')"
       [class]="{ 'font-bold': isLocale('en') }"
       >EN</a
     >
   </div>
   <div>
     <a
-      href="javascript:void();"
-      (click)="changeLocale('fr')"
+      href="#"
+      (click)="changeLocale($event, 'fr')"
       [class]="{ 'font-bold': isLocale('fr') }"
       >FR</a
     >

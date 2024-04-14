@@ -14,7 +14,8 @@ export class AppComponent {
     translate.use('en');
   }
 
-  public changeLocale(lang: string) {
+  public changeLocale(event: MouseEvent, lang: string) {
+    event.preventDefault();
     this.translate.use(lang);
   }
 
