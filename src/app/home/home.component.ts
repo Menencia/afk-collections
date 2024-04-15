@@ -5,6 +5,8 @@ import { HttpClient } from '@angular/common/http';
 import { AffixUtils } from '../shared/utils/affix.utils';
 import { CollectionUtils } from '../shared/utils/collection.utils';
 import { TranslateService } from '@ngx-translate/core';
+import { UiLayoutDefaultComponent } from '../shared/ui/ui-layout-default/ui-layout-default.component';
+import { SharedModule } from '../shared/shared.module';
 
 interface Affix {
   name: string;
@@ -21,6 +23,8 @@ const MAX_AFFIX_PRIORITIES = 4;
 
 @Component({
   selector: 'app-home',
+  standalone: true,
+  imports: [UiLayoutDefaultComponent, SharedModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
