@@ -63,7 +63,7 @@ export class HomeComponent {
   public search(event: { query: string }): void {
     this.allSuggestions = AffixUtils.getList(this.translateService);
     this.suggestions = this.allSuggestions.filter((affix) =>
-      affix.name.toLowerCase().includes(event.query),
+      affix.name.toLowerCase().includes(event.query.toLowerCase()),
     );
   }
 
