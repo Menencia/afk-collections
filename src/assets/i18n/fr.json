@@ -42,5 +42,11 @@
   "Select collection": "Selectionner une collection",
   "Affixes": "Attributs",
   "Add affix": "Ajouter un attribut",
-  "Results": "Resultats"
+  "Results": "Resultats",
+  "menu": {
+    "home": "Page d'accueil",
+    "heroes-list": "Liste des héros"
+  },
+  "coming soon": "bientôt",
+  "Credits": "Crédits"
 }

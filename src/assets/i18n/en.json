@@ -42,5 +42,11 @@
   "Select collection": "Select collection",
   "Affixes": "Affixes",
   "Add affix": "Add affix",
-  "Results": "Results"
+  "Results": "Results",
+  "menu": {
+    "home": "Home",
+    "heroes-list": "Heroes list"
+  },
+  "coming soon": "coming soon",
+  "Credits": "Credits"
 }

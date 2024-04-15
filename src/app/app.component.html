@@ -36,7 +36,7 @@
       routerLink="/home"
       routerLinkActive="font-bold"
       class="hover:text-blue-600"
-      >Home</a
+      >{{ "menu.home" | translate }}</a
     >
   </p>
   <p>
@@ -45,14 +45,14 @@
       routerLinkActive="font-bold"
       aria-disabled="true"
       class="text-gray-300"
-      >Heroes list</a
+      >{{ "menu.heroes-list" | translate }}</a
     >
-    <span class="italic"> (coming soon)</span>
+    <span class="italic text-xs"> ({{ "coming soon" | translate }})</span>
   </p>
   <ng-template pTemplate="footer">
     <div class="text-xs">
       Version : 1.0.0<br />
-      Crédits: Menencia & Glaciale
+      {{ "Credits" | translate }}: Menencia & Glaciale
     </div>
   </ng-template>
 </p-sidebar>
