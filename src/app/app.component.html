@@ -30,7 +30,6 @@
 <router-outlet></router-outlet>
 
 <p-sidebar [(visible)]="sidebarVisible">
-  <h3>MENU</h3>
   <p>
     <a
       routerLink="/home"
@@ -49,6 +48,8 @@
     >
     <span class="italic text-xs"> ({{ "coming soon" | translate }})</span>
   </p>
+
+  <ng-template pTemplate="header">MENU</ng-template>
   <ng-template pTemplate="footer">
     <div class="text-xs">
       Version : 1.0.0<br />
