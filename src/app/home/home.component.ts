@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { AutoCompleteSelectEvent } from 'primeng/autocomplete';
 
@@ -7,7 +7,7 @@ import { Hero, HeroJson } from '../shared/models/hero';
 import { SharedModule } from '../shared/shared.module';
 import { UiLayoutDefaultComponent } from '../shared/ui/ui-layout-default/ui-layout-default.component';
 import { AffixUtils } from '../shared/utils/affix.utils';
-import { CollectionUtils } from '../shared/utils/collection.utils';
+import { SelectCollectionComponent } from './ui/select-collection/select-collection.component';
 
 interface Affix {
   name: string;
@@ -25,22 +25,20 @@ const MAX_AFFIX_PRIORITIES = 4;
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [UiLayoutDefaultComponent, SharedModule],
+  imports: [UiLayoutDefaultComponent, SharedModule, SelectCollectionComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnChanges {
   public selectedAffix?: Affix;
   public suggestions: { code: string; name: string }[];
   public affixes: Affix[] = [];
   public results: ResultHero[] = [];
   public selectedCollection?: { code: string; name: string };
-  public allCollections: { code: string; name: string }[];
 
   private allSuggestions: { code: string; name: string }[];
   private allHeroes: Hero[] = [];
 
-  public selectCollectionPl?: string;
   public addAffixPl?: string;
 
   constructor(
@@ -57,12 +55,13 @@ export class HomeComponent {
         return new Hero(d.name, collections, d.stats[0], d.stats[1]);
       });
     });
-    this.allCollections = CollectionUtils.getList(translateService);
     this.translateService.onLangChange.subscribe(() => {
-      this.selectCollectionPl =
-        this.translateService.instant('Select collection');
       this.addAffixPl = this.translateService.instant('Add affix');
     });
+  }
+
+  public ngOnChanges(changes: SimpleChanges) {
+    console.log(changes);
   }
 
   public search(event: { query: string }): void {

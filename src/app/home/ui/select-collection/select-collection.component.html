@@ -1,0 +1,31 @@
+<p-panel header="Collection" styleClass="mb-3">
+  <p-dropdown
+    [options]="allCollections"
+    [(ngModel)]="collection"
+    optionLabel="name"
+    [placeholder]="selectCollectionPl"
+    [showClear]="true"
+    (onChange)="update()"
+  >
+    <ng-template pTemplate="selectedItem">
+      <div class="flex items-center gap-2" *ngIf="collection">
+        <img
+          src="/assets/collections/{{ collection.code }}.png"
+          alt="{{ collection.name }}"
+          class="h-8"
+        />
+        <div>{{ "collection." + collection.code | translate }}</div>
+      </div>
+    </ng-template>
+    <ng-template let-collection pTemplate="item">
+      <div class="flex items-center gap-2">
+        <img
+          src="/assets/collections/{{ collection.code }}.png"
+          alt="{{ collection.name }}"
+          class="h-8"
+        />
+        <div>{{ "collection." + collection.code | translate }}</div>
+      </div>
+    </ng-template>
+  </p-dropdown>
+</p-panel>

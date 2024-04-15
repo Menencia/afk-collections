@@ -1,35 +1,8 @@
 <app-ui-layout-default>
-  <p-panel header="Collection" styleClass="mb-3">
-    <p-dropdown
-      [options]="allCollections"
-      [(ngModel)]="selectedCollection"
-      optionLabel="name"
-      [placeholder]="selectCollectionPl"
-      [showClear]="true"
-      (onChange)="updateHeroes()"
-    >
-      <ng-template pTemplate="selectedItem">
-        <div class="flex items-center gap-2" *ngIf="selectedCollection">
-          <img
-            src="/assets/collections/{{ selectedCollection.code }}.png"
-            alt="{{ selectedCollection.name }}"
-            class="h-8"
-          />
-          <div>{{ "collection." + selectedCollection.code | translate }}</div>
-        </div>
-      </ng-template>
-      <ng-template let-collection pTemplate="item">
-        <div class="flex items-center gap-2">
-          <img
-            src="/assets/collections/{{ collection.code }}.png"
-            alt="{{ collection.name }}"
-            class="h-8"
-          />
-          <div>{{ "collection." + collection.code | translate }}</div>
-        </div>
-      </ng-template>
-    </p-dropdown>
-  </p-panel>
+  <app-select-collection
+    [(collection)]="selectedCollection"
+    (collectionChange)="updateHeroes()"
+  ></app-select-collection>
 
   <p-panel [header]="'Affixes' | translate" styleClass="mb-3">
     <div class="mb-2">
