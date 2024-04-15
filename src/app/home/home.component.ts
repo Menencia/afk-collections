@@ -102,14 +102,22 @@ export class HomeComponent {
     let results: ResultHero[] = heroes.map((hero) => {
       let score = 0;
       hero.offAffixes.forEach((offAffix, index) => {
-        if (this.affixes.map((s) => s.code).includes(offAffix)) {
-          score += MAX_AFFIX_PRIORITIES - index;
-        }
+        this.affixes
+          .map((s) => s.code)
+          .forEach((code) => {
+            if (code.includes(offAffix)) {
+              score += MAX_AFFIX_PRIORITIES - index;
+            }
+          });
       });
       hero.defAffixes.forEach((defAffix, index) => {
-        if (this.affixes.map((s) => s.code).includes(defAffix)) {
-          score += MAX_AFFIX_PRIORITIES - index;
-        }
+        this.affixes
+          .map((s) => s.code)
+          .forEach((code) => {
+            if (code.includes(defAffix)) {
+              score += MAX_AFFIX_PRIORITIES - index;
+            }
+          });
       });
       return {
         hero: hero,
