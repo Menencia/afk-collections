@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+
 import { SharedModule } from './shared/shared.module';
 
 @Component({
@@ -11,6 +12,7 @@ import { SharedModule } from './shared/shared.module';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  public title = 'afk-collections';
   public sidebarVisible = false;
 
   constructor(private translate: TranslateService) {

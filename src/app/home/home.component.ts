@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-import { AutoCompleteSelectEvent } from 'primeng/autocomplete';
-import { Hero, HeroJson } from '../shared/models/hero';
 import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { AutoCompleteSelectEvent } from 'primeng/autocomplete';
+
+import { Hero, HeroJson } from '../shared/models/hero';
+import { SharedModule } from '../shared/shared.module';
+import { UiLayoutDefaultComponent } from '../shared/ui/ui-layout-default/ui-layout-default.component';
 import { AffixUtils } from '../shared/utils/affix.utils';
 import { CollectionUtils } from '../shared/utils/collection.utils';
-import { TranslateService } from '@ngx-translate/core';
-import { UiLayoutDefaultComponent } from '../shared/ui/ui-layout-default/ui-layout-default.component';
-import { SharedModule } from '../shared/shared.module';
 
 interface Affix {
   name: string;

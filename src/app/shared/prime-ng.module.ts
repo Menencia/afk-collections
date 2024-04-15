@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
-
 import { AutoCompleteModule } from 'primeng/autocomplete';
-import { ChipModule } from 'primeng/chip';
-import { CardModule } from 'primeng/card';
-import { TagModule } from 'primeng/tag';
-import { DropdownModule } from 'primeng/dropdown';
-import { TooltipModule } from 'primeng/tooltip';
-import { PanelModule } from 'primeng/panel';
 import { BadgeModule } from 'primeng/badge';
-import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { ChipModule } from 'primeng/chip';
+import { DropdownModule } from 'primeng/dropdown';
+import { PanelModule } from 'primeng/panel';
+import { SidebarModule } from 'primeng/sidebar';
+import { TagModule } from 'primeng/tag';
+import { TooltipModule } from 'primeng/tooltip';
 
 const primeNgModules = [
   AutoCompleteModule,
