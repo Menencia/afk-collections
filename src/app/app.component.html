@@ -1,6 +1,13 @@
 <nav
   class="flex items-center gap-5 p-3 bg-gray-200 dark:bg-gray-800 dark:text-white"
 >
+  <p-button
+    (click)="sidebarVisible = true"
+    icon="pi pi-list"
+    [rounded]="true"
+    [text]="true"
+    severity="secondary "
+  ></p-button>
   <h1 class="font-bold">AFK Arena - {{ "tool.collections" | translate }}</h1>
   <div>
     <a
@@ -21,3 +28,31 @@
 </nav>
 
 <router-outlet></router-outlet>
+
+<p-sidebar [(visible)]="sidebarVisible">
+  <h3>MENU</h3>
+  <p>
+    <a
+      routerLink="/home"
+      routerLinkActive="font-bold"
+      class="hover:text-blue-600"
+      >Home</a
+    >
+  </p>
+  <p>
+    <a
+      routerLink="/ss"
+      routerLinkActive="font-bold"
+      aria-disabled="true"
+      class="text-gray-300"
+      >Heroes list</a
+    >
+    <span class="italic"> (coming soon)</span>
+  </p>
+  <ng-template pTemplate="footer">
+    <div class="text-xs">
+      Version : 1.0.0<br />
+      Crédits: Menencia & Glaciale
+    </div>
+  </ng-template>
+</p-sidebar>
