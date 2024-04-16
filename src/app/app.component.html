@@ -6,7 +6,7 @@
     icon="pi pi-list"
     [rounded]="true"
     [text]="true"
-    severity="secondary "
+    severity="secondary"
   ></p-button>
   <h1 class="font-bold">{{ title }} - {{ "tool.collections" | translate }}</h1>
   <div>
@@ -29,31 +29,4 @@
 
 <router-outlet></router-outlet>
 
-<p-sidebar [(visible)]="sidebarVisible">
-  <p>
-    <a
-      routerLink="/home"
-      routerLinkActive="font-bold"
-      class="hover:text-blue-600"
-      >{{ "menu.home" | translate }}</a
-    >
-  </p>
-  <p>
-    <a
-      routerLink="/ss"
-      routerLinkActive="font-bold"
-      aria-disabled="true"
-      class="text-gray-300"
-      >{{ "menu.heroes-list" | translate }}</a
-    >
-    <span class="italic text-xs"> ({{ "coming soon" | translate }})</span>
-  </p>
-
-  <ng-template pTemplate="header">MENU</ng-template>
-  <ng-template pTemplate="footer">
-    <div class="text-xs">
-      Version : 1.0.0<br />
-      {{ "Contributors" | translate }}: Menencia, Glaciale & Vlab
-    </div>
-  </ng-template>
-</p-sidebar>
+<app-menu-sidebar [(visible)]="sidebarVisible"></app-menu-sidebar>
