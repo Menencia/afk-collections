@@ -52,7 +52,6 @@ export class ResultsComponent implements OnChanges {
       });
     }
 
-    console.log(this.selectedCollection, this.affixes);
     if (this.affixes.length === 0) {
       this.results = [];
       return;
