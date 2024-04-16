@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 
+import { MenuSidebarComponent } from './shared/components/menu-sidebar/menu-sidebar.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { SharedModule } from './shared/shared.module';
-import { MenuSidebarComponent } from './shared/ui/menu-sidebar/menu-sidebar.component';
-import { NavbarComponent } from './shared/ui/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
