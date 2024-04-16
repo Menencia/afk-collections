@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestModule } from 'src/app/shared/test.module';
 
 import { SelectAffixComponent } from './select-affix.component';
 
@@ -8,7 +9,7 @@ describe('SelectAffixComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SelectAffixComponent],
+      imports: [TestModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SelectAffixComponent);

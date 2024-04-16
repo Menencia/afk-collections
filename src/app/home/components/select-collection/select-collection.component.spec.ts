@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestModule } from 'src/app/shared/test.module';
 
 import { SelectCollectionComponent } from './select-collection.component';
 
@@ -8,7 +9,7 @@ describe('SelectCollectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SelectCollectionComponent],
+      imports: [SelectCollectionComponent, TestModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SelectCollectionComponent);
