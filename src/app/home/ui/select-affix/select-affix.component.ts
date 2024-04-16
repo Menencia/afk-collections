@@ -17,7 +17,7 @@ export class SelectAffixComponent {
 
   public select(newAffix: Affix): void {
     this.affixes.push(newAffix);
-    this.affixesChange.emit(this.affixes);
+    this.affixesChange.emit([...this.affixes]);
   }
 
   public removeAffix(affix: Affix): void {
