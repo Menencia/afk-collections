@@ -1,0 +1,35 @@
+<p-panel [header]="'Affixes' | translate" styleClass="mb-3">
+  <div class="mb-2">
+    <p-chip
+      *ngFor="let affix of affixes"
+      label="{{ 'affix.' + affix.code | translate }}"
+      removable="true"
+      (onRemove)="removeAffix(affix)"
+      image="/assets/affixes/{{ affix.code }}.png"
+      alt="affix"
+      styleClass="inline-block mr-1"
+    ></p-chip>
+  </div>
+
+  <p-autoComplete
+    [(ngModel)]="selectedAffix"
+    [suggestions]="suggestions"
+    [placeholder]="addAffixPl"
+    [dropdown]="true"
+    field="name"
+    (completeMethod)="search($event)"
+    (onSelect)="select($event)"
+  >
+    <ng-template let-affix pTemplate="item">
+      <div class="flex items-center gap-2">
+        <img
+          src="/assets/affixes/{{ affix.code }}.png"
+          [class]="'flag flag-' + affix.code"
+          alt="affix"
+          class="h-8"
+        />
+        <div>{{ "affix." + affix.code | translate }}</div>
+      </div>
+    </ng-template>
+  </p-autoComplete>
+</p-panel>
