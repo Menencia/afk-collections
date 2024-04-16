@@ -1,0 +1,28 @@
+<nav
+  class="flex items-center gap-5 p-3 bg-gray-200 dark:bg-gray-800 dark:text-white"
+>
+  <p-button
+    (click)="openMenuSidebar()"
+    icon="pi pi-list"
+    [rounded]="true"
+    [text]="true"
+    severity="secondary"
+  ></p-button>
+  <h1 class="font-bold">{{ title }} - {{ "tool.collections" | translate }}</h1>
+  <div>
+    <a
+      href="#"
+      (click)="changeLocale($event, 'en')"
+      [class]="{ 'font-bold': isLocale('en') }"
+      >EN</a
+    >
+  </div>
+  <div>
+    <a
+      href="#"
+      (click)="changeLocale($event, 'fr')"
+      [class]="{ 'font-bold': isLocale('fr') }"
+      >FR</a
+    >
+  </div>
+</nav>
