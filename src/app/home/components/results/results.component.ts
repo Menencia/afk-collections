@@ -1,8 +1,10 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnChanges } from '@angular/core';
+import { HeroAffixesComponent } from 'src/app/shared/components/hero-affixes/hero-affixes.component';
+import { HeroCollectionsComponent } from 'src/app/shared/components/hero-collections/hero-collections.component';
 import { Affix } from 'src/app/shared/models/affix';
-import { Hero, HeroJson } from 'src/app/shared/models/hero';
+import { Hero } from 'src/app/shared/models/hero';
 import { ResultHero } from 'src/app/shared/models/result-hero';
+import { DataService } from 'src/app/shared/services/data.service';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 const MAX_AFFIX_PRIORITIES = 4;
@@ -10,7 +12,7 @@ const MAX_AFFIX_PRIORITIES = 4;
 @Component({
   selector: 'app-results',
   standalone: true,
-  imports: [SharedModule],
+  imports: [SharedModule, HeroCollectionsComponent, HeroAffixesComponent],
   templateUrl: './results.component.html',
   styleUrl: './results.component.scss',
 })
@@ -22,14 +24,9 @@ export class ResultsComponent implements OnChanges {
 
   private allHeroes: Hero[] = [];
 
-  constructor(private http: HttpClient) {
-    this.http.get('/assets/heroes.json').subscribe((data: unknown) => {
-      this.allHeroes = (data as HeroJson[]).map((d) => {
-        const collections = d.colls.map((coll) => {
-          return { name: coll[0], level: coll[1] };
-        });
-        return new Hero(d.name, collections, d.stats[0], d.stats[1]);
-      });
+  constructor(private data: DataService) {
+    this.data.getHeroes().subscribe((heroes) => {
+      this.allHeroes = heroes;
     });
   }
 

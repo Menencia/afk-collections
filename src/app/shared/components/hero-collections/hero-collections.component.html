@@ -1,0 +1,10 @@
+<ng-container *ngFor="let collection of collections">
+  <img
+    pTooltip="{{ 'collection.' + collection.name | translate }}"
+    tooltipPosition="bottom"
+    src="/assets/collections/{{ collection.name }}.png"
+    class="h-8 inline-block"
+    alt="collection"
+  />
+  <p-badge value="{{ collection.level }}"></p-badge>
+</ng-container>
