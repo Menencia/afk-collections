@@ -4,36 +4,15 @@
       {{ result.hero.name | titlecase }}
       <p-tag [value]="result.score + ' pts'" severity="info"></p-tag>
       <div>
-        <ng-container *ngFor="let collection of result.hero.collections">
-          <img
-            pTooltip="{{ 'collection.' + collection.name | translate }}"
-            tooltipPosition="bottom"
-            src="/assets/collections/{{ collection.name }}.png"
-            class="h-8 inline-block"
-            alt="collection"
-          />
-          <p-badge value="{{ collection.level }}"></p-badge>
-        </ng-container>
+        <app-hero-collections
+          [collections]="result.hero.collections"
+        ></app-hero-collections>
       </div>
       <div>
-        <img
-          *ngFor="let offAffix of result.hero.offAffixes"
-          pTooltip="{{ 'affix.' + offAffix | translate }}"
-          tooltipPosition="bottom"
-          src="/assets/affixes/{{ offAffix }}.png"
-          class="h-8 inline-block"
-          alt="{{ offAffix }}"
-        />
+        <app-hero-affixes [affixes]="result.hero.offAffixes"></app-hero-affixes>
       </div>
       <div>
-        <img
-          *ngFor="let defAffix of result.hero.defAffixes"
-          pTooltip="{{ 'affix.' + defAffix | translate }}"
-          tooltipPosition="bottom"
-          src="/assets/affixes/{{ defAffix }}.png"
-          class="h-8 inline-block"
-          alt="{{ defAffix }}"
-        />
+        <app-hero-affixes [affixes]="result.hero.defAffixes"></app-hero-affixes>
       </div>
     </p-card>
   </div>

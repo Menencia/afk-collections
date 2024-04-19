@@ -15,16 +15,12 @@ import { AffixUtils } from 'src/app/shared/utils/affix.utils';
 export class SearchAffixComponent {
   @Output() public selectedAffixChange = new EventEmitter<Affix>();
 
-  public addAffixPl?: string;
   public suggestions: { code: string; name: string }[];
   private allSuggestions: { code: string; name: string }[];
 
   constructor(public translateService: TranslateService) {
     this.allSuggestions = AffixUtils.getList(translateService);
     this.suggestions = [...this.allSuggestions];
-    this.translateService.onLangChange.subscribe(() => {
-      this.addAffixPl = this.translateService.instant('Add affix');
-    });
   }
 
   public search(event: { query: string }): void {

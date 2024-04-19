@@ -1,0 +1,28 @@
+<app-ui-layout-default>
+  <p-table [value]="heroes" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Hero</th>
+        <th>Collection</th>
+        <th>Offensive affixes</th>
+        <th>Defensive affixes</th>
+      </tr>
+    </ng-template>
+    <ng-template [appTableRow]="heroes" pTemplate="body" let-hero>
+      <tr>
+        <td>{{ hero.name }}</td>
+        <td>
+          <app-hero-collections
+            [collections]="hero.collections"
+          ></app-hero-collections>
+        </td>
+        <td>
+          <app-hero-affixes [affixes]="hero.offAffixes"></app-hero-affixes>
+        </td>
+        <td>
+          <app-hero-affixes [affixes]="hero.defAffixes"></app-hero-affixes>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</app-ui-layout-default>

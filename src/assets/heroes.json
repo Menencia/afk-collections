@@ -75,7 +75,7 @@
     "name": "elijah-and-lailah",
     "colls": [["rowan", 2], ["tasi", 0]],
     "stats": [
-      ["err", "f-atk", "ero"],
+      ["err", "f-atk", "erosion"],
       ["dmg-r", "cdr", "def", "hp"]
     ]
   },
