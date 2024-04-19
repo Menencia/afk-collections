@@ -19,9 +19,6 @@ export class SelectCollectionComponent {
 
   constructor(translateService: TranslateService) {
     this.allCollections = CollectionUtils.getList(translateService);
-    translateService.onLangChange.subscribe(() => {
-      this.selectCollectionPl = translateService.instant('Select collection');
-    });
   }
 
   public update() {

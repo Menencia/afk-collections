@@ -3,7 +3,7 @@
     [options]="allCollections"
     [(ngModel)]="collection"
     optionLabel="name"
-    [placeholder]="selectCollectionPl"
+    [placeholder]="'Select collection' | translate"
     [showClear]="true"
     (onChange)="update()"
   >
