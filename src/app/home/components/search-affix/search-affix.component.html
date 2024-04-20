@@ -1,7 +1,9 @@
 <p-autoComplete
+  #autoComplete
   [suggestions]="suggestions"
   [placeholder]="'Add affix' | translate"
   [dropdown]="true"
+  dropdownMode="blank"
   field="name"
   (completeMethod)="search($event)"
   (onSelect)="select($event)"

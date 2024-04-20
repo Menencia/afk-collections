@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { AutoCompleteSelectEvent } from 'primeng/autocomplete';
+import { Dropdown } from 'primeng/dropdown';
 import { Affix } from 'src/app/shared/models/affix';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AffixUtils } from 'src/app/shared/utils/affix.utils';
@@ -13,6 +14,7 @@ import { AffixUtils } from 'src/app/shared/utils/affix.utils';
   styleUrl: './search-affix.component.scss',
 })
 export class SearchAffixComponent {
+  @ViewChild('autoComplete') public autoComplete!: Dropdown;
   @Output() public selectedAffixChange = new EventEmitter<Affix>();
 
   public suggestions: { code: string; name: string }[];
@@ -32,5 +34,6 @@ export class SearchAffixComponent {
 
   public select(event: AutoCompleteSelectEvent): void {
     this.selectedAffixChange.emit(event.value as Affix);
+    this.autoComplete.writeValue('');
   }
 }
