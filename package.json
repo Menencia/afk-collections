@@ -9,7 +9,8 @@
     "test": "ng test",
     "test:ci": "ng test --no-watch --code-coverage --no-progress --browsers=ChromeHeadless",
     "deploy": "ng build && firebase deploy",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "check": "ng lint && npm run test:ci"
   },
   "private": true,
   "dependencies": {
