@@ -45,8 +45,9 @@
   "Results": "Results",
   "menu": {
     "home": "Home",
-    "heroes-list": "Heroes list"
-  },
-  "coming soon": "coming soon",
-  "Contributors": "Contributors"
+    "heroes-list": "Heroes list",
+    "comingSoon": "coming soon",
+    "lastCommits": "Last commits",
+    "contributors": "Contributors"
+  }
 }

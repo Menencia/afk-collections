@@ -19,8 +19,13 @@
   <ng-template pTemplate="header">MENU</ng-template>
   <ng-template pTemplate="footer">
     <div class="text-xs">
-      Version : 1.0.0<br />
-      {{ "Contributors" | translate }}: Menencia, Glaciale & Vlab
+      <a
+        href="https://github.com/Menencia/afk-collections/commits/master/"
+        class="hover:text-blue-600"
+        target="_blank"
+        >{{ "menu.lastCommits" | translate }}</a
+      ><br />
+      {{ "menu.contributors" | translate }}: Menencia, Glaciale & Vlab
     </div>
   </ng-template>
 </p-sidebar>
