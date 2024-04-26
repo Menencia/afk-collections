@@ -12,6 +12,7 @@ import { SharedModule } from '../../shared.module';
 })
 export class NavbarComponent {
   @Input() public sidebarVisible = false;
+
   @Output() public sidebarVisibleChange = new EventEmitter();
 
   public title = 'afk-collections';

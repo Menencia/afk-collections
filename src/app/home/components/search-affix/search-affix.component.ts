@@ -15,9 +15,11 @@ import { AffixUtils } from 'src/app/shared/utils/affix.utils';
 })
 export class SearchAffixComponent {
   @ViewChild('autoComplete') public autoComplete!: Dropdown;
+
   @Output() public selectedAffixChange = new EventEmitter<Affix>();
 
   public suggestions: { code: string; name: string }[];
+
   private allSuggestions: { code: string; name: string }[];
 
   constructor(public translateService: TranslateService) {

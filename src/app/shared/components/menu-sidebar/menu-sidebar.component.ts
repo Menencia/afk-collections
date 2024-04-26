@@ -21,6 +21,7 @@ import { SharedModule } from '../../shared.module';
 })
 export class MenuSidebarComponent implements OnInit, OnDestroy {
   @Input() public visible = false;
+
   @Output() public visibleChange = new EventEmitter();
 
   private sub = new SubSink();

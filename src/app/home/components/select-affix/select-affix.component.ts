@@ -13,6 +13,7 @@ import { SearchAffixComponent } from '../search-affix/search-affix.component';
 })
 export class SelectAffixComponent {
   @Input() public affixes: Affix[] = [];
+
   @Output() public affixesChange = new EventEmitter();
 
   public select(newAffix: Affix): void {

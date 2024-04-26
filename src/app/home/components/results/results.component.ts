@@ -18,6 +18,7 @@ const MAX_AFFIX_PRIORITIES = 4;
 })
 export class ResultsComponent implements OnChanges {
   @Input() public selectedCollection?: { code: string; name: string };
+
   @Input() public affixes: Affix[] = [];
 
   public results: ResultHero[] = [];
@@ -76,7 +77,7 @@ export class ResultsComponent implements OnChanges {
           });
       });
       return {
-        hero: hero,
+        hero,
         score,
       };
     });

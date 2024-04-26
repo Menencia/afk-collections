@@ -12,9 +12,11 @@ import { CollectionUtils } from 'src/app/shared/utils/collection.utils';
 })
 export class SelectCollectionComponent {
   public allCollections: { code: string; name: string }[];
+
   public selectCollectionPl?: string;
 
   @Input() public collection?: { code: string; name: string };
+
   @Output() public collectionChange = new EventEmitter();
 
   constructor(translateService: TranslateService) {
