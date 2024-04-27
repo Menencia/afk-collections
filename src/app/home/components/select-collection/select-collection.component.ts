@@ -1,12 +1,15 @@
+import { NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { FormsModule } from '@angular/forms';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { DropdownModule } from 'primeng/dropdown';
+import { PanelModule } from 'primeng/panel';
 import { CollectionUtils } from 'src/app/shared/utils/collection.utils';
 
 @Component({
   selector: 'app-select-collection',
   standalone: true,
-  imports: [SharedModule],
+  imports: [TranslateModule, DropdownModule, PanelModule, FormsModule, NgIf],
   templateUrl: './select-collection.component.html',
   styleUrl: './select-collection.component.scss',
 })

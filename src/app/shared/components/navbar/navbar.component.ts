@@ -1,12 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-
-import { SharedModule } from '../../shared.module';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [SharedModule],
+  imports: [TranslateModule, ButtonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })

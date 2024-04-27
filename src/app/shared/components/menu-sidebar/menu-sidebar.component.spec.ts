@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterModule } from '@angular/router';
-
-import { TestModule } from '../../test.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { MenuSidebarComponent } from './menu-sidebar.component';
 
@@ -11,7 +10,11 @@ describe('MenuSidebarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MenuSidebarComponent, RouterModule.forRoot([]), TestModule],
+      imports: [
+        MenuSidebarComponent,
+        RouterModule.forRoot([]),
+        TranslateModule.forRoot(),
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MenuSidebarComponent);

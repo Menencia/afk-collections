@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TestModule } from 'src/app/shared/test.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { SelectCollectionComponent } from './select-collection.component';
 
@@ -9,7 +10,11 @@ describe('SelectCollectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SelectCollectionComponent, TestModule],
+      imports: [
+        SelectCollectionComponent,
+        TranslateModule.forRoot(),
+        BrowserAnimationsModule,
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SelectCollectionComponent);

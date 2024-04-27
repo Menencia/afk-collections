@@ -1,15 +1,17 @@
 import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { AutoCompleteSelectEvent } from 'primeng/autocomplete';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import {
+  AutoCompleteModule,
+  AutoCompleteSelectEvent,
+} from 'primeng/autocomplete';
 import { Dropdown } from 'primeng/dropdown';
 import { Affix } from 'src/app/shared/models/affix';
-import { SharedModule } from 'src/app/shared/shared.module';
 import { AffixUtils } from 'src/app/shared/utils/affix.utils';
 
 @Component({
   selector: 'app-search-affix',
   standalone: true,
-  imports: [SharedModule],
+  imports: [TranslateModule, AutoCompleteModule],
   templateUrl: './search-affix.component.html',
   styleUrl: './search-affix.component.scss',
 })

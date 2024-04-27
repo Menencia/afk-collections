@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TestModule } from 'src/app/shared/test.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { SearchAffixComponent } from './search-affix.component';
 
@@ -9,7 +9,7 @@ describe('SearchAffixComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TestModule],
+      imports: [SearchAffixComponent, TranslateModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SearchAffixComponent);

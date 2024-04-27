@@ -1,13 +1,22 @@
+import { NgFor } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { ChipModule } from 'primeng/chip';
+import { PanelModule } from 'primeng/panel';
 import { Affix } from 'src/app/shared/models/affix';
-import { SharedModule } from 'src/app/shared/shared.module';
 
 import { SearchAffixComponent } from '../search-affix/search-affix.component';
 
 @Component({
   selector: 'app-select-affix',
   standalone: true,
-  imports: [SharedModule, SearchAffixComponent],
+  imports: [
+    SearchAffixComponent,
+    PanelModule,
+    ChipModule,
+    TranslateModule,
+    NgFor,
+  ],
   templateUrl: './select-affix.component.html',
   styleUrl: './select-affix.component.scss',
 })

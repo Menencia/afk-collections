@@ -1,18 +1,31 @@
+import { NgFor, TitleCasePipe } from '@angular/common';
 import { Component, Input, OnChanges } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { CardModule } from 'primeng/card';
+import { PanelModule } from 'primeng/panel';
+import { TagModule } from 'primeng/tag';
 import { HeroAffixesComponent } from 'src/app/shared/components/hero-affixes/hero-affixes.component';
 import { HeroCollectionsComponent } from 'src/app/shared/components/hero-collections/hero-collections.component';
 import { Affix } from 'src/app/shared/models/affix';
 import { Hero } from 'src/app/shared/models/hero';
 import { ResultHero } from 'src/app/shared/models/result-hero';
 import { DataService } from 'src/app/shared/services/data.service';
-import { SharedModule } from 'src/app/shared/shared.module';
 
 const MAX_AFFIX_PRIORITIES = 4;
 
 @Component({
   selector: 'app-results',
   standalone: true,
-  imports: [SharedModule, HeroCollectionsComponent, HeroAffixesComponent],
+  imports: [
+    TranslateModule,
+    HeroCollectionsComponent,
+    HeroAffixesComponent,
+    TagModule,
+    PanelModule,
+    CardModule,
+    TitleCasePipe,
+    NgFor,
+  ],
   templateUrl: './results.component.html',
   styleUrl: './results.component.scss',
 })

@@ -7,15 +7,15 @@ import {
   Output,
 } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { SidebarModule } from 'primeng/sidebar';
 import { filter } from 'rxjs';
 import { SubSink } from 'subsink';
-
-import { SharedModule } from '../../shared.module';
 
 @Component({
   selector: 'app-menu-sidebar',
   standalone: true,
-  imports: [SharedModule, RouterModule],
+  imports: [RouterModule, TranslateModule, SidebarModule],
   templateUrl: './menu-sidebar.component.html',
   styleUrl: './menu-sidebar.component.scss',
 })

@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { TestModule } from '../shared/test.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { HomeComponent } from './home.component';
 
@@ -11,7 +11,12 @@ describe('HomeComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [TestModule, HttpClientModule],
+      imports: [
+        HomeComponent,
+        TranslateModule.forRoot(),
+        HttpClientModule,
+        BrowserAnimationsModule,
+      ],
     });
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
