@@ -42,12 +42,16 @@
   "Select collection": "Select collection",
   "Affixes": "Affixes",
   "Add affix": "Add affix",
-  "Results": "Results",
+  "Results": "Results ({{sourceName}})",
   "menu": {
     "home": "Home",
     "heroes-list": "Heroes list",
     "comingSoon": "coming soon",
     "lastCommits": "Last commits",
     "contributors": "Contributors"
+  },
+  "source": {
+    "vlab": "Priority by Vlab",
+    "ingame": "Priority by data found in game (hero tips)"
   }
 }

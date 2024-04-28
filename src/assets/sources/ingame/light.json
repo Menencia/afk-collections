@@ -1,0 +1,98 @@
+[
+  {
+    "name": "a-belinda",
+    "colls": [["oden", 3]],
+    "stats": [
+      ["atk", "mp"],
+      ["def", "hp", "dmg-r"]
+    ]
+  },
+  {
+    "name": "a-lucius",
+    "colls": [["daimon", 3]],
+    "stats": [
+      ["atk", "pp"],
+      ["def", "hp", "dmg-r"]
+    ]
+  },
+  {
+    "name": "a-thane",
+    "colls": [["athalia", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["def", "hp"]
+    ]
+  },
+  {
+    "name": "estrilda",
+    "colls": [["saurus", 3]],
+    "stats": [
+      ["atk", "pp"],
+      ["def", "hp", "f-def"]
+    ]
+  },
+  {
+    "name": "jerome",
+    "colls": [["zolrath", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["def", "hp", "f-def"]
+    ]
+  },
+  {
+    "name": "ginneas",
+    "colls": [["orthros", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["def", "hp", "f-def"]
+    ]
+  },
+  {
+    "name": "palmer",
+    "colls": [["rowan", 3]],
+    "stats": [
+      ["atk", "mp", "f-atk"],
+      ["def", "cdr", "f-def"]
+    ]
+  },
+  {
+    "name": "raine",
+    "colls": [["rowan", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["f-def", "f-hp", "f-buffer"]
+    ]
+  },
+  {
+    "name": "rosaline",
+    "colls": [["tasi", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["def", "f-def", "f-hp"]
+    ]
+  },
+  {
+    "name": "rowan",
+    "colls": [["rowan", 3]],
+    "stats": [
+      ["f-atk"],
+      ["def", "hp", "f-def", "f-hp"]
+    ]
+  },
+  {
+    "name": "scarlet",
+    "colls": [["oden", 3]],
+    "stats": [
+      ["atk", "mp", "f-atk"],
+      ["def", "hp"]
+    ]
+  },
+  {
+    "name": "sonja",
+    "colls": [["daimon", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["def", "hp", "dmg-r"]
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "a-baden",
+    "colls": [["athalia", 3]],
+    "stats": [
+      ["atk", "pp", "erosion", "f-atk"],
+      ["dmg-r"]
+    ]
+  },
+  {
+    "name": "a-shemira",
+    "colls": [["daimon", 3]],
+    "stats": [
+      ["atk", "mp", "f-atk"],
+      ["def", "hp"]
+    ]
+  },
+  {
+    "name": "daimon",
+    "colls": [["daimon", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["def", "hp", "dmg-r"]
+    ]
+  },
+  {
+    "name": "edwin",
+    "colls": [["daimon", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["def", "hp", "dmg-r"]
+    ]
+  },
+  {
+    "name": "grezhul",
+    "colls": [["daimon", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["def", "hp", "f-def"]
+    ]
+  },
+  {
+    "name": "ivan",
+    "colls": [["rowan", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["def", "hp", "f-hp"]
+    ]
+  },
+  {
+    "name": "oden",
+    "colls": [["oden", 3]],
+    "stats": [
+      ["atk", "mp", "erosion", "f-atk"],
+      ["def"]
+    ]
+  },
+  {
+    "name": "silas",
+    "colls": [["tasi", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["def", "hp", "f-def"]
+    ]
+  },
+  {
+    "name": "thoran",
+    "colls": [["daimon", 3]],
+    "stats": [
+      ["atk"],
+      ["def", "hp", "dmg-r", "f-hp"]
+    ]
+  }
+]

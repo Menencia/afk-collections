@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { Observable, forkJoin, map } from 'rxjs';
 
 import { Hero, HeroJson } from '../models/hero';
 
@@ -10,12 +10,32 @@ import { Hero, HeroJson } from '../models/hero';
 export class DataService {
   constructor(private http: HttpClient) {}
 
+  getVlabPriorities(): Observable<Hero[]> {
+    return this.getHeroesJson('/assets/sources/vlab.json');
+  }
+
+  getInGamePriorities(): Observable<Hero[]> {
+    return forkJoin([
+      this.getHeroesJson('/assets/sources/ingame/light.json'),
+      this.getHeroesJson('/assets/sources/ingame/mauler.json'),
+      this.getHeroesJson('/assets/sources/ingame/wilder.json'),
+      this.getHeroesJson('/assets/sources/ingame/graveborn.json'),
+      this.getHeroesJson('/assets/sources/ingame/celest.json'),
+      this.getHeroesJson('/assets/sources/ingame/hypogean.json'),
+      this.getHeroesJson('/assets/sources/ingame/dimensional.json'),
+    ]).pipe(
+      map((heroes) => {
+        return heroes.flat();
+      }),
+    );
+  }
+
   /**
    * Return all heroes from json file
    * @returns list of heroes
    */
-  public getHeroes(): Observable<Hero[]> {
-    return this.http.get<HeroJson[]>('/assets/heroes.json').pipe(
+  private getHeroesJson(file: string): Observable<Hero[]> {
+    return this.http.get<HeroJson[]>(file).pipe(
       map((heroes) => {
         return heroes.map((d) => {
           const collections = d.colls.map((coll) => {

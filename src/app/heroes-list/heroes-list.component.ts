@@ -25,7 +25,7 @@ export class HeroesListComponent {
   public heroes: Hero[] = [];
 
   constructor(private data: DataService) {
-    this.data.getHeroes().subscribe((heroes) => {
+    this.data.getVlabPriorities().subscribe((heroes) => {
       this.heroes = heroes;
     });
   }

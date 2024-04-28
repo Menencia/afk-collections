@@ -1,0 +1,74 @@
+[
+  {
+    "name": "a-athalia",
+    "colls": [["saurus", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["def", "dmg-r"]
+    ]
+  },
+  {
+    "name": "alna",
+    "colls": [["zolrath", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["def", "hp", "f-hp"]
+    ]
+  },
+  {
+    "name": "athalia",
+    "colls": [["athalia", 3]],
+    "stats": [
+      ["atk", "erosion", "f-atk", "f-erosion"],
+      ["hp"]
+    ]
+  },
+  {
+    "name": "daemia",
+    "colls": [["mehira", 3]],
+    "stats": [
+      ["atk", "mp", "f-atk"],
+      ["hp", "dmg-r"]
+    ]
+  },
+  {
+    "name": "elijah & lailah",
+    "colls": [["tasi", 3]],
+    "stats": [
+      ["f-atk"],
+      ["def", "hp", "f-def", "f-hp"]
+    ]
+  },
+  {
+    "name": "haelus",
+    "colls": [["tasi", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["def", "hp", "f-def"]
+    ]
+  },
+  {
+    "name": "liberta",
+    "colls": [["tasi", 3]],
+    "stats": [
+      ["atk", "mp", "erosion", "f-atk"],
+      ["dmg-r"]
+    ]
+  },
+  {
+    "name": "tarnos",
+    "colls": [["zolrath", 3]],
+    "stats": [
+      ["atk", "mp", "erosion", "f-atk"],
+      ["f-buffer"]
+    ]
+  },
+  {
+    "name": "veithael",
+    "colls": [["orthros", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["def", "hp", "dmg-r"]
+    ]
+  }
+]

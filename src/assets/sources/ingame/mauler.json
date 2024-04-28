@@ -1,0 +1,74 @@
+[
+  {
+    "name": "a-brutus",
+    "colls": [["saurus", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["def", "dmg-r"]
+    ]
+  },
+  {
+    "name": "a-safiya",
+    "colls": [["rowan", 3]],
+    "stats": [
+      ["atk", "mp", "erosion", "f-atk"],
+      ["f-def"]
+    ]
+  },
+  {
+    "name": "anasta",
+    "colls": [["saurus", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["def", "f-def"]
+    ]
+  },
+  {
+    "name": "brutus",
+    "colls": [["daimon", 3]],
+    "stats": [
+      ["atk", "f-erosion"],
+      ["def", "buffer", "f-def"]
+    ]
+  },
+  {
+    "name": "fario",
+    "colls": [["athalia", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["def", "buffer"]
+    ]
+  },
+  {
+    "name": "kren",
+    "colls": [["athalia", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["def", "dmg-r"]
+    ]
+  },
+  {
+    "name": "naroko",
+    "colls": [["orthros", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["def", "hp", "dmg-r"]
+    ]
+  },
+  {
+    "name": "skreg",
+    "colls": [["daimon", 3]],
+    "stats": [
+      ["f-atk"],
+      ["def", "hp", "dmg-r", "f-hp"]
+    ]
+  },
+  {
+    "name": "skriath",
+    "colls": [["oden", 3]],
+    "stats": [
+      ["atk", "mp", "f-atk"],
+      ["hp", "f-hp"]
+    ]
+  }
+]

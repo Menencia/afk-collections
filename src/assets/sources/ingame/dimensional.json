@@ -1,0 +1,26 @@
+[
+  {
+    "name": "emilia",
+    "colls": [["oden", 3]],
+    "stats": [
+      ["atk", "mp", "f-atk"],
+      ["def", "dmg-r"]
+    ]
+  },
+  {
+    "name": "mulan",
+    "colls": [["tidus", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["def", "hp"]
+    ]
+  },
+  {
+    "name": "rem",
+    "colls": [["saurus", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["def", "hp"]
+    ]
+  }
+]

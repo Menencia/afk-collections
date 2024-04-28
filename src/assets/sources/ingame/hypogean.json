@@ -1,0 +1,106 @@
+[
+  {
+    "name": "a-ezizh",
+    "colls": [["oden", 3]],
+    "stats": [
+      ["atk", "erosion"],
+      ["def", "hp", "f-hp"]
+    ]
+  },
+  {
+    "name": "a-maetria",
+    "colls": [["mehira", 3]],
+    "stats": [
+      ["atk", "mp", "erosion", "f-atk"],
+      ["dmg-r"]
+    ]
+  },
+  {
+    "name": "canisa & ruke",
+    "colls": [["daimon", 3]],
+    "stats": [
+      ["atk"],
+      ["def", "hp", "dmg-r", "f-def"]
+    ]
+  },
+  {
+    "name": "ezizh",
+    "colls": [["tasi", 3]],
+    "stats": [
+      ["f-atk"],
+      ["def", "hp", "dmg-r", "f-buffer"]
+    ]
+  },
+  {
+    "name": "framton",
+    "colls": [["saurus", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["buffer", "f-def"]
+    ]
+  },
+  {
+    "name": "khazard",
+    "colls": [["mehira", 3]],
+    "stats": [
+      ["atk", "mp", "f-atk"],
+      ["hp", "dmg-r"]
+    ]
+  },
+  {
+    "name": "lavatune",
+    "colls": [["tasi", 3]],
+    "stats": [
+      ["atk", "mp", "f-atk"],
+      ["dmg-r", "f-def"]
+    ]
+  },
+  {
+    "name": "lucilla",
+    "colls": [["tasi", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["def", "hp", "f-def"]
+    ]
+  },
+  {
+    "name": "lucretia",
+    "colls": [["athalia", 3]],
+    "stats": [
+      ["atk", "pp", "erosion"],
+      ["def", "hp"]
+    ]
+  },
+  {
+    "name": "mehira",
+    "colls": [["mehira", 3]],
+    "stats": [
+      ["atk", "f-erosion"],
+      ["hp", "dmg-r", "f-def"]
+    ]
+  },
+  {
+    "name": "mortas",
+    "colls": [["tasi", 3]],
+    "stats": [
+      ["atk", "mp", "f-atk"],
+      ["hp", "f-def"]
+    ]
+  },
+  {
+    "name": "olgath",
+    "colls": [["athalia", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["f-def", "f-buffer"]
+    ]
+  },
+  {
+    "name": "zolrath",
+    "colls": [["zolrath", 3]],
+    "stats": [
+      ["atk", "erosion", "f-atk"],
+      ["def", "buffer"]
+    ]
+  }
+]

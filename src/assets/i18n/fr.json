@@ -42,12 +42,16 @@
   "Select collection": "Selectionner une collection",
   "Affixes": "Attributs",
   "Add affix": "Ajouter un attribut",
-  "Results": "Resultats",
+  "Results": "Resultats ({{sourceName}})",
   "menu": {
     "home": "Page d'accueil",
     "heroes-list": "Liste des héros",
     "comingSoon": "bientôt",
     "lastCommits": "Derniers changements",
     "contributors": "Contributeurs"
+  },
+  "source": {
+    "vlab": "Priorité selon Vlab",
+    "ingame": "Priorité selon les données du jeu (astuces du héros)"
   }
 }

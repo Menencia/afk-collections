@@ -1,0 +1,90 @@
+[
+  {
+    "name": "a-lyca",
+    "colls": [["athalia", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["def", "hp"]
+    ]
+  },
+  {
+    "name": "a-solise",
+    "colls": [["tasi", 3]],
+    "stats": [
+      ["atk", "mp", "f-atk"],
+      ["def", "f-def"]
+    ]
+  },
+  {
+    "name": "astar",
+    "colls": [["tasi", 3]],
+    "stats": [
+      ["atk", "mp", "f-atk"],
+      ["hp", "f-def"]
+    ]
+  },
+  {
+    "name": "eironn",
+    "colls": [["tidus", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["def", "f-def"]
+    ]
+  },
+  {
+    "name": "eorin",
+    "colls": [["athalia", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["def", "hp"]
+    ]
+  },
+  {
+    "name": "lyca",
+    "colls": [["athalia", 3]],
+    "stats": [
+      ["atk", "f-atk"],
+      ["def", "dmg-r", "f-def"]
+    ]
+  },
+  {
+    "name": "mishka",
+    "colls": [["daimon", 3]],
+    "stats": [
+      ["atk"],
+      ["def", "hp", "dmg-r", "f-def"]
+    ]
+  },
+  {
+    "name": "nevanthi",
+    "colls": [["tasi", 3]],
+    "stats": [
+      ["f-atk"],
+      ["def", "hp", "f-def", "f-hp"]
+    ]
+  },
+  {
+    "name": "raku",
+    "colls": [["athalia", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["def", "hp"]
+    ]
+  },
+  {
+    "name": "saurus",
+    "colls": [["saurus", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["def", "buffer"]
+    ]
+  },
+  {
+    "name": "tamrus",
+    "colls": [["zolrath", 3]],
+    "stats": [
+      ["atk", "pp", "f-atk"],
+      ["def", "dmg-r"]
+    ]
+  }
+]
