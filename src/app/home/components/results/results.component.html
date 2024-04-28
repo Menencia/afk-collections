@@ -2,6 +2,7 @@
   [header]="'source.' + source.name | translate"
   styleClass="mb-3"
   *ngFor="let source of sources"
+  [toggleable]="true"
 >
   <div class="flex flex-wrap gap-2">
     <p-card *ngFor="let result of source.results">
